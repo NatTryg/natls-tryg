@@ -8,9 +8,7 @@ public enum DescriptorType
 	DESCRIPTOR,
 	SUPERDESCRIPTOR,
 	PHONETIC,
-	UNIQUE,
-	HYPERDESCRIPTOR,
-	NONDESCRIPTOR;
+	UNIQUE;
 
 	/**
 	 * Constructs the {@link DescriptorType} from source.
@@ -26,8 +24,6 @@ public enum DescriptorType
 			case "S" -> SUPERDESCRIPTOR;
 			case "P" -> PHONETIC;
 			case "U" -> UNIQUE;
-			case "H" -> HYPERDESCRIPTOR;
-			case "N" -> NONDESCRIPTOR;
 			case " " -> NONE;
 			default -> throw new NaturalParseException(String.format("Can't determine DescriptorType from \"%s\"", source));
 		};
